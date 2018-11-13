@@ -113,13 +113,44 @@
             <th width=20%><p>所要時間</p></th>
           </tr>
           <tr>
-            <td align="center"><p>{{ currentCalorie }} [Kcal]</p></td>
-            <td align="center"><p>{{ restCalorie }} [Kcal]</p></td>
-            <td align="center"><p>{{ exerciseRank }}</p></td>
+            <td align="center">
+              <form>
+                <label for="textForm">現在の消費カロリー: </label>
+                <input type="text" id="textForm">
+                <button id="button">動画選択</button>
+              </form>
+            </td>
+            <td align="center"><p id="rest">{{ restCalorie }} [Kcal]</p></td>
+            <td align="center"><p id="exercise">{{ exerciseRank }}</p></td>
             <td align="center"><p>40秒 (固定)</p></td>
           </tr>
         </table>
       </div>
+      
+        <script>
+      var button = document.getElementById("button");
+      button.addEventListener("click", function(e) {
+        e.preventDefault();
+        var textForm = document.getElementById("textForm").value;
+        var sum = 100 - parseInt(textForm, 10);
+        var movie = "";
+
+        if (parseInt(textForm, 10) <= 30) {
+          document.getElementById("rest").textContent= sum;
+          document.getElementById("exercise").textContent = "大";
+          movie = "movie1";
+        } else if(parseInt(textForm, 10) > 30 && parseInt(textForm, 10) <= 60) {
+          document.getElementById("rest").textContent= sum;
+          document.getElementById("exercise").textContent = "中";
+          movie = "movie2";
+        } else {
+          document.getElementById("rest").textContent= sum;
+          document.getElementById("exercise").textContent = "小";
+          movie = "movie3";
+        }
+
+      })
+      </script>
 
       <div class='campaign'>
         <a class="modal_open"><b>背景を選んで運動を開始する</b></a>
@@ -132,7 +163,7 @@
         <li><label><input type="radio" name="category" value="cg">CG</label></li>
       </ul>
       <div class="modal_a_parent">
-        <a class="startBtn" href="../static/html/{{ movieNum }}.html?category="><b>始める</b><br><small>※背景はカテゴリごとに<br>ランダムに選択されます．</small></a>
+        <a class="startBtn" href="../static/html/" + movie + ".html?category="><b>始める</b><br><small>※背景はカテゴリごとに<br>ランダムに選択されます．</small></a>
       </div>
     </div>
   </div>
