@@ -132,7 +132,7 @@
       <script>
     var movie = "movie3";
     document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + "/");
+        document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
     }, false);
     </script>
       
@@ -149,21 +149,21 @@
           document.getElementById("exercise").textContent = "大";
           var movie = "movie1";
           document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + "/");
+            document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
         }, false);
         } else if(parseInt(textForm, 10) > 70 && parseInt(textForm, 10) <= 180) {
           document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "中";
           var movie = "movie2";
           document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + "/");
+            document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
         }, false);
         } else {
           document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "小";
           var movie = "movie3";
           document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + "/");
+            document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
           }, false);
         }
 
