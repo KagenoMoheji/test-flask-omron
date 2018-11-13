@@ -139,23 +139,20 @@
           document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "大";
           movie = "movie1";
-          document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + id + "/");
         } else if(parseInt(textForm, 10) > 70 && parseInt(textForm, 10) <= 180) {
           document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "中";
           movie = "movie2";
-          document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + id + "/");
         } else {
           document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "小";
           movie = "movie3";
-          document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + id + "/");
         }
 
       })
       </script>
 
-      <div class='campaign' id="anchor1">
+      <div class='campaign'>
         <a class="modal_open" href="javascript:window.location.href='../static/html/'+movie+'.html';"><b>運動を開始する</b></a>
       </div>
   </div>
