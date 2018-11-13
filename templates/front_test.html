@@ -139,23 +139,29 @@
           document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "大";
           movie = "movie1";
-          movie = '../static/html/movie1.html'
+          document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + "/");
+    }, false);
         } else if(parseInt(textForm, 10) > 70 && parseInt(textForm, 10) <= 180) {
           document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "中";
           movie = "movie2";
-          movie = '../static/html/movie2.html'
+          document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + "/");
+    }, false);
         } else {
           document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "小";
           movie = "movie3";
-          movie = '../static/html/movie3.html'
+          document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + "/");
+    }, false);
         }
 
       })
       </script>
       
-      <a class="campaign2" href="$movie"><b>運動を開始する</b></a>
+      <a class="campaign2" href="../static/html/" id="anchor1"><b>運動を開始する</b></a>
       
   </div>
 </body>
