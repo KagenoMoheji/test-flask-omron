@@ -34,37 +34,8 @@
 			//★表示させるYouTube動画の「動画ID」を設定する。
 							var youtubeVideoID = "lc7VUsLKkyE"; // (2分割)dAwoU0PiBKw
 
-		var video_nature = new Array(
-			"https://test-flask-omron.herokuapp.com/static/html/vr/vr1_1.html",
-			"https://test-flask-omron.herokuapp.com/static/html/vr/vr1_2.html"
-			);
-		var video_city = new Array(
-			"https://test-flask-omron.herokuapp.com/static/html/vr/vr2_1.html",
-			"https://test-flask-omron.herokuapp.com/static/html/vr/vr2_2.html"
-			);
-		var video_cg = new Array(
-			"https://test-flask-omron.herokuapp.com/static/html/vr/vr3_1.html",
-			"https://test-flask-omron.herokuapp.com/static/html/vr/vr3_2.html"
-			);
-
-		var videonum = Math.floor(Math.random() * video_city.length);
-
-			//★リダイレクトさせる移動先のページのURLを設定する。
-		var params = [];
-var param = location.search.substring(1).split('&');
-for(var i = 0; i < param.length; i++) {
-    params[i] = param[i].split('=');
-}
-
 // パラメータの使用
-
-		if (params[0][1] == 'nature') {
-			redirectUrl = video_nature[videonum];
-		} else if (params[0][1] == 'city') {
-			redirectUrl = video_city[videonum];
-		} else {
-			redirectUrl = video_cg[videonum]
-		}
+		redirectUrl = "https://test-flask-omron.herokuapp.com/static/html/movie2.html/";
 
 			//★リダイレクト先のページを新しいウィンドウ（新しいタブ）で開くか、
 			//  同じページ内で開くかを設定する
