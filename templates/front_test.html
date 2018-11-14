@@ -130,27 +130,6 @@
       <a class="campaign2" href="../static/html" id="anchor1"><b>運動を開始する</b></a>
       
       <script>
-        var textForm = document.getElementById("textForm").value;
-        var movie = "movie1";
-        if (pareInt(textForm, 10) <= 70) {
-          var movie = "movie1";
-          document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
-          }, false);
-        } else if(parseInt(textForm, 10) > 70 && parseInt(textForm, 10) <= 180) {
-           var movie = "movie2";
-           document.addEventListener("DOMContentLoaded", function () {
-           document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
-          }, false);
-        } else {
-          var movie = "movie1";
-          document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
-          }, false);
-        } 
-      </script>
-      
-      <script>
       var button = document.getElementById("button");
       button.addEventListener("click", function(e) {
         e.preventDefault();
@@ -162,27 +141,19 @@
           document.getElementById("exercise").textContent = "大";
           
           var movie = "movie1";
-          document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
-          }, false);
-          
+          document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
         } else if(parseInt(textForm, 10) > 70 && parseInt(textForm, 10) <= 180) {
           document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "中";
           
           var movie = "movie2";
-          document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
-          }, false);
-          
+          document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
         } else {
           document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "小";
           
           var movie = "movie3";
-          document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
-          }, false);
+          document.getElementById("anchor1").setAttribute("href", document.getElementById("anchor1").getAttribute("href") + "/" + movie + ".html/");
         }
 
       })
