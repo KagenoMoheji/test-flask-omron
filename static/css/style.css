@@ -82,7 +82,7 @@ a{
   margin-block-end: 0.2em!important;
 }
 
-.compaign{
+.campaign{
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
@@ -92,7 +92,7 @@ a{
     border-radius: 3px;
     text-align: center;
 }
-.compaign:active {/*ボタンを押したとき*/
+.campaign:active {/*ボタンを押したとき*/
     -ms-transform: translateY(4px);
     -webkit-transform: translateY(4px);
     transform: translateY(4px);/*下に動く*/
