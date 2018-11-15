@@ -84,6 +84,9 @@ a{
 
 .campaign{
   width:100%;
+  height: 20%;
+  margin-top:2px;
+  text-align: center;
 }
 .campaign a{
     display: inline-block;

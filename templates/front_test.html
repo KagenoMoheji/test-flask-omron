@@ -129,7 +129,7 @@
       </div>
       
       <div class="link campaign">
-        <a href="../static/html" id="anchor1">運動を開始する</a>
+        <a href="../static/html/movie1.html" id="anchor1">運動を開始する</a>
       </div>
       
       <script>
@@ -145,15 +145,15 @@
         if (rest <= 0){
           document.getElementById("exercise").textContent = "達成済み";
           $("#anchor1").attr("href","../static/html/movie3.html")
-        }else if (rest < 50) {
-          document.getElementById("exercise").textContent = "大";
-          $("#anchor1").attr("href","../static/html/movie3.html")
-        } else if(rest < 100) {
+        }else if (rest < 130) {
+          document.getElementById("exercise").textContent = "弱";
+          $("#anchor1").attr("href","../static/html/movie1.html")
+        } else if(rest < 200) {
           document.getElementById("exercise").textContent = "中";
           $("#anchor1").attr("href","../static/html/movie2.html")
         } else {
-          document.getElementById("exercise").textContent = "小";
-          $("#anchor1").attr("href","../static/html/movie1.html")
+          document.getElementById("exercise").textContent = "強";
+          $("#anchor1").attr("href","../static/html/movie3.html")
         }
         
       })
