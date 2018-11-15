@@ -107,9 +107,9 @@
       <div class="calorieTable">
         <table border="1" width="100%" style="margin:0;">
           <tr>
-            <th width=20%><p>あなたの歩数</p></th>
+            <th width=20%><p>あなたの歩数(差分)</p></th>
             <th width=20%><p>消費カロリー</p></th>
-            <th width=20%><p>残りカロリー</p></th>
+            <th width=20%><p>残りカロリー(目標240[cal])</p></th>
             <th width=20%><p>運動強度</p></th>
             <th width=20%><p>所要時間</p></th>
           </tr>
@@ -138,13 +138,15 @@
         e.preventDefault();
         var textForm = document.getElementById("textForm").value;
         var currCal = getCalorie(textForm)
-        var sum = 240 - parseInt(currCal, 10);
+        var rest = 240 - currCal
 
-        document.getElementById("rest").textContent= sum+" [cal]";
+        document.getElementById("rest").textContent= rest+" [cal]";
         document.getElementById("curr").textContent= currCal+" [cal]"
-        if (parseInt(textForm, 10) <= 70) {
+        if (currCal <= 0){
+          document.getElementById("exercise").textContent = "達成済み";
+        }else if (currCal < 150) {
           document.getElementById("exercise").textContent = "大";
-        } else if(parseInt(textForm, 10) > 70 && parseInt(textForm, 10) <= 180) {
+        } else if(currCal < 250) {
           document.getElementById("exercise").textContent = "中";
         } else {
           document.getElementById("exercise").textContent = "小";

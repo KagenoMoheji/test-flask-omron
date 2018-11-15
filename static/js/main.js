@@ -73,5 +73,5 @@ function getCalorie(steps){
     let stepWidth = tall*0.45
     
     // https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1073878765
-    return stepWidth*steps*weight/1000 // [cal]
+    return parseInt(stepWidth*steps*weight/1000) // [cal]
 }

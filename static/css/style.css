@@ -82,16 +82,19 @@ a{
   margin-block-end: 0.2em!important;
 }
 
+.campaign{
+  width:100%;
+}
 .campaign a{
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
-    background: #668ad8;/*ボタン色*/
+    background: #ff8800;/*ボタン色*/
     color: #FFF;
     border-bottom: solid 4px #627295;
     border-radius: 3px;
     text-align: center;
-    width: 100%;
+    width: 80%;
 }
 .campaign a:active {/*ボタンを押したとき*/
     -ms-transform: translateY(4px);
