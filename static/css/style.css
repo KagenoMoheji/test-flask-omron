@@ -91,6 +91,7 @@ a{
     border-bottom: solid 4px #627295;
     border-radius: 3px;
     text-align: center;
+    width: 100%;
 }
 .link:active {/*ボタンを押したとき*/
     -ms-transform: translateY(4px);
@@ -98,6 +99,7 @@ a{
     transform: translateY(4px);/*下に動く*/
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
     border-bottom: none;
+    width: 100%;
 }
 
 .modal_window{
