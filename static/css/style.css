@@ -95,6 +95,7 @@ a{
     border-radius: 3px;
     text-align: center;
     width: 80%;
+    margin: 10px auto;
 }
 .campaign a:active {/*ボタンを押したとき*/
     -ms-transform: translateY(4px);
