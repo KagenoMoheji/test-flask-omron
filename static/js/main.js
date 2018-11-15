@@ -65,3 +65,13 @@ $(function(){
         return true
     })
 })
+
+function getCalorie(steps){
+    // 身長・体重は平均的な数値で固定
+    let tall = 170
+    let weight = 57
+    let stepWidth = tall*0.45
+    
+    // https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1073878765
+    return stepWidth*steps*weight/1000 // [cal]
+}

@@ -107,28 +107,29 @@
       <div class="calorieTable">
         <table border="1" width="100%" style="margin:0;">
           <tr>
-            <th width=30%><p>消費カロリー</p></th>
-            <th width=30%><p>残り消費カロリー</p></th>
+            <th width=20%><p>あなたの歩数</p></th>
+            <th width=20%><p>消費カロリー</p></th>
+            <th width=20%><p>残りカロリー</p></th>
             <th width=20%><p>運動強度</p></th>
             <th width=20%><p>所要時間</p></th>
           </tr>
           <tr>
             <td align="center">
               <form>
-                <label for="textForm">現在の消費カロリー: </label>
                 <input type="text" id="textForm">
                 <button id="button">更新</button>
               </form>
             </td>
-            <td align="center"><p id="rest">{{ restCalorie }} [Kcal]</p></td>
+            <td align="center"><p id="curr">0 [cal]</p></td>
+            <td align="center"><p id="rest">0 [cal]</p></td>
             <td align="center"><p id="exercise">{{ exerciseRank }}</p></td>
             <td align="center"><p>40秒 (固定)</p></td>
           </tr>
         </table>
       </div>
       
-      <div class="link">
-        <a class="campaign" href="../static/html" id="anchor1" onclick="OnLinkClick();">運動を開始する</a>
+      <div class="link campaign">
+        <a href="../static/html" id="anchor1" onclick="OnLinkClick();">運動を開始する</a>
       </div>
       
       <script>
@@ -136,16 +137,16 @@
       button.addEventListener("click", function(e) {
         e.preventDefault();
         var textForm = document.getElementById("textForm").value;
-        var sum = 240 - parseInt(textForm, 10);
+        var currCal = getCalorie(textForm)
+        var sum = 240 - parseInt(currCal, 10);
 
+        document.getElementById("rest").textContent= sum+" [cal]";
+        document.getElementById("curr").textContent= currCal+" [cal]"
         if (parseInt(textForm, 10) <= 70) {
-          document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "大";
         } else if(parseInt(textForm, 10) > 70 && parseInt(textForm, 10) <= 180) {
-          document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "中";
         } else {
-          document.getElementById("rest").textContent= sum;
           document.getElementById("exercise").textContent = "小";
         }
         
