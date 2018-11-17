@@ -159,7 +159,8 @@
         //グラフ配列に追加
         var d=new Date()
         var currtime=d.getHours()+":"*d.getMinutes()
-        times[currtime]=currCal
+        times.push(currtime)
+        tCalories.push(currCal)
       })
         console.log(times)
       </script>
