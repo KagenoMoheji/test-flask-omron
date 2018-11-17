@@ -105,7 +105,7 @@ a{
     transform: translateY(4px);/*下に動く*/
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
     border-bottom: none;
-    width: 100%;
+    width: 80%;
 }
 
 .modal_window{
