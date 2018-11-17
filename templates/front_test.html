@@ -98,7 +98,7 @@
                       responsive: true
                   }
                 });
-              DayChart.renser()
+              DayChart.render()
             </script>
           </li>
         </ul>
@@ -155,7 +155,11 @@
           document.getElementById("exercise").textContent = "強";
           $("#anchor1").attr("href","../static/html/movie3.html")
         }
-        
+
+        //グラフ配列に追加
+        var d=new Date()
+        var currtime=d.getHours()+":"*d.getMinutes()
+        times[currtime]=currCal
       })
         
       </script>
