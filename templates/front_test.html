@@ -161,6 +161,25 @@
         var currtime=d.getHours()+":"*d.getMinutes()
         times.push(currtime)
         tCalories.push(currCal)
+        var ctx = document.getElementById("FiftChart").getContext('2d');
+        var FiftChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: times,
+              datasets: [
+              {
+                label: "消費カロリー",
+                borderColor: 'rgb(255, 0, 0)',
+                data: tCalories,
+              }
+              ]
+          },
+          options: {
+              responsive: true
+          }
+        });
+
+        FiftChart.render();
       })
         console.log(times)
       </script>
